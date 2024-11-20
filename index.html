@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>document</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin: 0;
+            padding: 0;
+            transition: background-color 0.5s;
+        }
+        #container {
+            padding-top: 50px;
+        }
+        img {
+            width: 100%; 
+            max-width: 500px;  
+            height: auto;  
+            border-radius: 8px;
+            transition: all 0.5s;
+        }
+        button {
+            padding: 10px 20px;
+            font-size: 16px;
+            margin: 10px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+
+    <div id="container">
+        <img id="image" src="swag.jfif" alt="Image">
+        <h1>Press the buttons :3</h1>
+        <br>
+        <button onclick="changeToBlue()">Blue Theme</button>
+        <button onclick="changeToPink()">Pink Theme</button>
+        <button onclick="changeToGreyOrBrown()">Grey/Brown Theme</button>
+    </div>
+
+    <script>
+        function changeToBlue() {
+            document.body.style.backgroundColor = "blue";
+            document.getElementById("image").src = "boy.jfif";
+        }
+
+
+        function changeToPink() {
+            document.body.style.backgroundColor = "pink";
+            document.getElementById("image").src = "girl.jfif";
+        }
+
+
+        function changeToGreyOrBrown() {
+            const randomColor = Math.random() < 0.5 ? "grey" : "brown";
+            document.body.style.backgroundColor = randomColor;
+            document.getElementById("image").src = "old.jfif";
+        }
+    </script>
+
+</body>
+</html>
